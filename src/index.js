@@ -5,6 +5,7 @@ const cors = require('cors')
 const userApi = require('./routes/users.routes')
 const authApi = require('./routes/auth.routes')
 const chatApi = require('./routes/chat.routes')
+const messageApi = require('./routes/message.routes')
 
 const app = express()
 
@@ -21,5 +22,6 @@ app.get('/',(req,res)=>{
 userApi(app)
 authApi(app)
 chatApi(app)
+messageApi(app)
 
 app.listen(config.port,()=>console.log("http://localhost:"+config.port))
